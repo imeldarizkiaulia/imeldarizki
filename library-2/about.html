@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Me - Perpustakaan Digital</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <style>
+      :root {
+        --primary-color: #4e73df;
+        --secondary-color: #f8f9fc;
+      }
+
+      body {
+        font-family: "Segoe UI", system-ui, sans-serif;
+        line-height: 1.6;
+      }
+
+      .site-header {
+        background: linear-gradient(135deg, var(--primary-color), #224abe);
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      }
+
+      .profile-img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        border: 5px solid white;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      }
+
+      .info-card {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        transition: transform 0.3s;
+      }
+
+      .info-card:hover {
+        transform: translateY(-5px);
+      }
+
+      .social-icon {
+        font-size: 1.5rem;
+        margin: 0 10px;
+        color: var(--primary-color);
+        transition: all 0.3s;
+      }
+
+      .social-icon:hover {
+        transform: scale(1.2);
+        color: #224abe;
+      }
+
+      /* Dark Mode */
+      .dark-mode {
+        background-color: #1a1a2e;
+        color: #f0f0f0;
+      }
+
+      .dark-mode .navbar,
+      .dark-mode footer {
+        background-color: #16213e !important;
+      }
+
+      .dark-mode .info-card {
+        background-color: #0f3460;
+        color: #fff;
+      }
+
+      @media (max-width: 768px) {
+        .profile-img {
+          width: 150px;
+          height: 150px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header text-white py-3">
+      <div class="container">
+        <div class="d-flex flex-column flex-md-row justify-content-between align-items-center">
+          <div class="text-center text-md-start mb-3 mb-md-0">
+            <h1 class="site-title m-0">
+              <i class="fas fa-book-open me-2"></i>
+              Perpustakaan Digital
+            </h1>
+            <p class="m-0 d-none d-md-block">Imelda Rizki Aulia</p>
+          </div>
+          <div>
+            <button id="darkModeToggle" class="btn btn-sm btn-light"><i class="fas fa-moon me-1"></i> Dark Mode</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-evenly">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i> Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link active" href="about.html"><i class="fas fa-user me-1"></i> About Me</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html"><i class="fas fa-envelope me-1"></i> Contact Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="formulir.php"> <i class="fas fa-envelope me-1"></i> Formulir </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="mathmatrix.php"> <i class="fas fa-envelope me-1"></i> MathMatrix </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <!-- Profile Section -->
+          <section class="text-center mb-5">
+            <img src="images/imel.jpg" alt="Profile Photo" class="profile-img rounded-circle mb-3" />
+            <h2 class="mb-3">Imelda Rizki Aulia</h2>
+            <p class="lead text-muted">Mahasiswa Ilmu Perpustakaan dan Sains Informasi</p>
+
+            <div class="d-flex justify-content-center mt-4">
+              <a href="https://www.instagram.com/imeldarizkiaulia_?igsh=NGd5eHNkbWVyMjRm" class="social-icon" target="_blank">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="mailto:imeldarizkiaulia07@gmail.com" class="social-icon">
+                <i class="fas fa-envelope"></i>
+              </a>
+            </div>
+          </section>
+
+          <!-- Biodata Section -->
+          <section class="mb-5">
+            <div class="info-card card mb-4">
+              <div class="card-header bg-primary text-white">
+                <h3 class="m-0"><i class="fas fa-id-card me-2"></i>Biodata</h3>
+              </div>
+              <div class="card-body">
+                <div class="table-responsive">
+                  <table class="table table-hover">
+                    <tbody>
+                      <tr>
+                        <th scope="row" width="30%">Nama Lengkap</th>
+                        <td>Imelda Rizki Aulia</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">NIM</th>
+                        <td>220709091</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Program Studi</th>
+                        <td>Ilmu Perpustakaan dan Sains Informasi</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Fakultas</th>
+                        <td>Fakultas Ilmu Budaya</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Universitas</th>
+                        <td>Universitas Sumatera Utara</td>
+                      </tr>
+                      <tr>
+                        <th scope="row">Domisili</th>
+                        <td>Medan, Sumatera Utara</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <div class="info-card card">
+              <div class="card-header bg-primary text-white">
+                <h3 class="m-0"><i class="fas fa-graduation-cap me-2"></i>Pendidikan</h3>
+              </div>
+              <div class="card-body">
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h5 class="mb-1">Universitas Sumatera Utara</h5>
+                      <small class="text-muted">Ilmu Perpustakaan dan Sains Informasi</small>
+                    </div>
+                    <span class="badge bg-primary rounded-pill">2022 - Sekarang</span>
+                  </li>
+                  <li class="list-group-item d-flex justify-content-between align-items-center">
+                    <div>
+                      <h5 class="mb-1">SMA Negeri 1 Matauli Pandan</h5>
+                      <small class="text-muted">Jurusan IPS</small>
+                    </div>
+                    <span class="badge bg-secondary rounded-pill">2019 - 2022</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </section>
+
+          <!-- About Website Section -->
+          <section class="info-card card mb-4">
+            <div class="card-header bg-primary text-white">
+              <h3 class="m-0"><i class="fas fa-info-circle me-2"></i>Tentang Website Ini</h3>
+            </div>
+            <div class="card-body">
+              <p>Website ini dibuat untuk memenuhi tugas mata kuliah <strong>Pengembangan Web Perpustakaan</strong>.</p>
+              <p>Dikembangkan dengan dukungan dari <strong>Digilab Universitas Sumatera Utara</strong> sebagai referensi pembelajaran.</p>
+              <p>Tujuan utama website ini adalah menyediakan akses mudah terhadap koleksi digital untuk mendukung kegiatan akademik.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-4 mt-auto">
+      <div class="container text-center">
+        <p class="mb-0">&copy; 2025 Perpustakaan Digital Imelda Rizki Aulia. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      // Dark Mode Toggle
+      document.getElementById("darkModeToggle").addEventListener("click", function () {
+        document.body.classList.toggle("dark-mode");
+        this.innerHTML = document.body.classList.contains("dark-mode") ? '<i class="fas fa-sun me-1"></i> Light Mode' : '<i class="fas fa-moon me-1"></i> Dark Mode';
+        localStorage.setItem("darkMode", document.body.classList.contains("dark-mode"));
+      });
+
+      // Load dark mode preference
+      if (localStorage.getItem("darkMode") === "true") {
+        document.body.classList.add("dark-mode");
+        document.getElementById("darkModeToggle").innerHTML = '<i class="fas fa-sun me-1"></i> Light Mode';
+      }
+    </script>
+  </body>
+</html>
